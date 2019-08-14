@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 
 ################################################################################
-# Copyright (C) 2016 Jaakko Luttinen
+# Copyright (C) 2019 TNC
 #
 # This file is licensed under the MIT License.
 ################################################################################
 
 
-NAME         = 'rtd-tikz'
+NAME         = 'Mathema'
 DESCRIPTION  = 'Binaries in order to use Sphinx TikZ extension at Read the Docs'
 AUTHOR       = 'Jaakko Luttinen'
 AUTHOR_EMAIL = 'jaakko.luttinen@iki.fi'
