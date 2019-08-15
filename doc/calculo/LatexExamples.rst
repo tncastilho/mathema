@@ -47,7 +47,7 @@ Teste Termina!!!
 
 .. sidebar:: A code example
 
-    .. raw:: html
+.. raw:: html
    :file: JSXgraph.html
     
     
