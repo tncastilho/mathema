@@ -19,3 +19,9 @@ TikZ support in Read the Docs service
 
   f(x + h) = (x + h)^2
 
+*********************
+Include HTML 
+*********************
+
+.. raw:: html
+   :file: filename.html
