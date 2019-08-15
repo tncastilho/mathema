@@ -23,5 +23,14 @@ TikZ support in Read the Docs service
 Include HTML 
 *********************
 
+1. Planilha GeoGebra
+
 .. raw:: html
    :file: SecanteTangente.html
+
+
+
+2. Gráfico JSXgraph
+
+.. raw:: html
+   :file: JSXgraph.html
