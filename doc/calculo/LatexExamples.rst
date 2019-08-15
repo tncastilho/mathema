@@ -42,7 +42,14 @@ Include HTML
 .. raw:: html
    :file: JSXgraph.html
    
-3. AQUI TERMINA! 
+3.  Gráfico JSXgraph2
+
+.. raw:: html
+   :file: JSXgraph2.html
+
+
+TERMINA!!!
+
 
 .. sidebar:: A code example
 
