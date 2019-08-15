@@ -1,9 +1,10 @@
 .. toctree::
-    :maxdepth: 2
-    :numbered:
-    :caption: Demo Documents
-    
-    StructuralElements
+   :caption: Theme Documentation
+   :maxdepth: 2
+   
+   LatexExamples
+
+
     
  
  
