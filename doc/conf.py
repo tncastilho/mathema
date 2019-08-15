@@ -99,6 +99,12 @@ pygments_style = 'sphinx'
 #modindex_common_prefix = []
 
 
+
+# -- Styles for custom layout (my_theme.css in the _static folder)
+
+def setup(app):
+    app.add_stylesheet('my_theme.css')
+
 # -- Options for HTML output ---------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
@@ -271,5 +277,4 @@ texinfo_documents = [
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
 
-def setup(app):
-    app.add_stylesheet('my_theme.css')
+
