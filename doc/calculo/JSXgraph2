@@ -1,0 +1,226 @@
+<html>
+<head>
+<title>MathJax TeX Test Page</title>
+<!-- Copyright (c) 2010-2018 The MathJax Consortium -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+<script type="text/javascript" charset="UTF-8"
+src="//cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.3/jsxgraphcore.js"></script>
+
+</head>
+<body>
+
+<p>
+When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+</p>
+
+
+
+<div id="box" class="jxgbox" style="width:500px; height:500px;"></div>
+<script type="text/javascript">
+
+
+<jsxgraph width="400" height="400" box="box">
+    (function () {
+
+        var board = JXG.JSXGraph.initBoard('box', {boundingbox: [-1.5, 2, 1.5, -1], keepaspectratio:true});
+
+        var cerise = {
+                strokeColor: '#901B77',
+                fillColor: '#CA147A'
+            },
+
+            grass = {
+                strokeColor: '#009256',
+                fillColor: '#65B72E',
+                visible: true,
+                withLabel: true
+            },
+
+            perpendicular = {
+                strokeColor: 'black',
+                dash: 1,
+                strokeWidth: 1,
+                point: JXG.deepCopy(cerise, {
+                    visible: true,
+                    withLabel: true
+                })
+            },
+
+            median = {
+                strokeWidth: 1,
+                strokeColor: '#333333',
+                dash:2
+            },
+
+            A = board.create('point', [1, 0], cerise),
+            B = board.create('point', [-1, 0], cerise),
+            C = board.create('point', [0.2, 1.5], cerise),
+            pol = board.create('polygon',[A,B,C], {
+                fillColor: '#FFFF00',
+                lines: {
+                    strokeWidth: 2,
+                    strokeColor: '#009256'
+                }
+            });
+
+        var pABC, pBCA, pCAB, i1;
+        perpendicular.point.name = 'H_c';
+        pABC = board.create('perpendicular', [pol.borders[0], C], perpendicular);
+        perpendicular.point.name = 'H_a';
+        pBCA = board.create('perpendicular', [pol.borders[1], A], perpendicular);
+        perpendicular.point.name = 'H_b';
+        pCAB = board.create('perpendicular', [pol.borders[2], B], perpendicular);
+        grass.name = 'H';
+        i1 = board.create('intersection', [pABC, pCAB, 0], grass);
+
+        var mAB, mBC, mCA;
+        cerise.name = 'M_c';
+        mAB = board.create('midpoint', [A, B], cerise);
+        cerise.name = 'M_a';
+        mBC = board.create('midpoint', [B, C], cerise);
+        cerise.name = 'M_b';
+        mCA = board.create('midpoint', [C, A], cerise);
+
+        var ma, mb, mc, i2;
+        ma = board.create('segment', [mBC, A], median);
+        mb = board.create('segment', [mCA, B], median);
+        mc = board.create('segment', [mAB, C], median);
+        grass.name = 'S';
+        i2 = board.create('intersection', [ma, mc, 0], grass);
+
+        var c;
+        grass.name = 'U';
+        c = board.create('circumcircle',[A, B, C], {
+            strokeColor: '#000000',
+            dash: 3,
+            strokeWidth: 1,
+            center: grass
+        });
+
+        var euler;
+        euler = board.create('line', [i1, i2], {
+            strokeWidth: 2,
+            strokeColor:'#901B77'
+        });
+board.update();
+    })();
+</jsxgraph>
+
+===The JavaScript code===
+
+<source lang="javascript">
+(function () {
+
+    var board = JXG.JSXGraph.initBoard('box', {boundingbox: [-1.5, 2, 1.5, -1], keepaspectratio:true});
+
+    var cerise = {
+            strokeColor: '#901B77',
+            fillColor: '#CA147A'
+        },
+
+        grass = {
+            strokeColor: '#009256',
+            fillColor: '#65B72E',
+            visible: true,
+            withLabel: true
+        },
+
+        perpendicular = {
+            strokeColor: 'black',
+            dash: 1,
+            strokeWidth: 1,
+            point: JXG.deepCopy(cerise, {
+                visible: true,
+                withLabel: true
+            })
+        },
+
+        median = {
+            strokeWidth: 1,
+            strokeColor: '#333333',
+            dash:2
+        },
+
+        A = board.create('point', [1, 0], cerise),
+        B = board.create('point', [-1, 0], cerise),
+        C = board.create('point', [0.2, 1.5], cerise),
+        pol = board.create('polygon',[A,B,C], {
+            fillColor: '#FFFF00',
+            lines: {
+                strokeWidth: 2,
+                strokeColor: '#009256'
+            }
+        });
+
+    var pABC, pBCA, pCAB, i1;
+    perpendicular.point.name = 'H_c';
+    pABC = board.create('perpendicular', [pol.borders[0], C], perpendicular);
+    perpendicular.point.name = 'H_a';
+    pBCA = board.create('perpendicular', [pol.borders[1], A], perpendicular);
+    perpendicular.point.name = 'H_b';
+    pCAB = board.create('perpendicular', [pol.borders[2], B], perpendicular);
+    grass.name = 'H';
+    i1 = board.create('intersection', [pABC, pCAB, 0], grass);
+
+    var mAB, mBC, mCA;
+    cerise.name = 'M_c';
+    mAB = board.create('midpoint', [A, B], cerise);
+    cerise.name = 'M_a';
+    mBC = board.create('midpoint', [B, C], cerise);
+    cerise.name = 'M_b';
+    mCA = board.create('midpoint', [C, A], cerise);
+
+    var ma, mb, mc, i2;
+    ma = board.create('segment', [mBC, A], median);
+    mb = board.create('segment', [mCA, B], median);
+    mc = board.create('segment', [mAB, C], median);
+    grass.name = 'S';
+    i2 = board.create('intersection', [ma, mc, 0], grass);
+
+    var c;
+    grass.name = 'U';
+    c = board.create('circumcircle',[A, B, C], {
+        strokeColor: '#000000',
+        dash: 3,
+        strokeWidth: 1,
+        point: grass
+    });
+
+    var euler;
+    euler = board.create('line', [i1, i2], {
+        strokeWidth: 2,
+        strokeColor:'#901B77'
+    });
+    board.update();
+})();
+</source>
+
+[[Category:Examples]]
+[[Category:Geometry]]
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
