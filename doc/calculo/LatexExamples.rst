@@ -36,3 +36,10 @@ Include HTML
    :file: JSXgraph.html
    
 3. AQUI TERMINA! 
+
+.. sidebar:: A code example
+
+    With a sidebar on the right.
+    
+    
+Teste Termina!!
