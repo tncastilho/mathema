@@ -3,6 +3,25 @@
 TikZ support in Read the Docs service
 *********************
 
+.. tikz::
+   \begin{tikzpicture}
+    \node[shape=circle,draw=black] (A) at (0,0) {A};
+    \node[shape=circle,draw=black] (B) at (0,3) {B};
+    \node[shape=circle,draw=black] (C) at (2.5,4) {C};
+    \node[shape=circle,draw=black] (D) at (2.5,1) {D};
+    \node[shape=circle,draw=black] (E) at (2.5,-3) {E};
+    \node[shape=circle,draw=black] (F) at (5,3) {F} ;
+
+    \path [->] (A) edge node[left] {$5$} (B);
+    \path [->](B) edge node[left] {$3$} (C);
+    \path [->](A) edge node[left] {$4$} (D);
+    \path [->](D) edge node[left] {$3$} (C);
+    \path [->](A) edge node[right] {$3$} (E);
+    \path [->](D) edge node[left] {$3$} (E);
+    \path [->](D) edge node[top] {$3$} (F);
+    \path [->](C) edge node[top] {$5$} (F);
+    \path [->](E) edge node[right] {$8$} (F);   
+  \end{tikzpicture}
 
 .. tikz:: A beautiful TikZ drawing which works in readthedocs.org.
    \begin{tikzpicture}
