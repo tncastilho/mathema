@@ -42,6 +42,7 @@ Include HTML
 .. raw:: html
    :file: JSXgraph.html
    
+
 3.  Gráfico JSXgraph2
 
 .. raw:: html
@@ -56,11 +57,7 @@ TERMINA!!!
     With a sidebar on the right.
     
     
-Teste Termina!!!
 
-
-.. sidebar:: A code examplw
-:file: JSXgraph.html
     
     
 THE END!!!!
