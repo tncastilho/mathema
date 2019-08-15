@@ -43,3 +43,12 @@ Include HTML
     
     
 Teste Termina!!!
+
+
+.. sidebar:: A code example
+
+    .. raw:: html
+   :file: JSXgraph.html
+    
+    
+THE END!!!!
