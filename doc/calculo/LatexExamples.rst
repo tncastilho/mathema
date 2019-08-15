@@ -45,10 +45,8 @@ Include HTML
 Teste Termina!!!
 
 
-.. sidebar:: A code example
-
-.. raw:: html
-   :file: JSXgraph.html
+.. sidebar:: A code examplw
+:file: JSXgraph.html
     
     
 THE END!!!!
