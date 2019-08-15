@@ -1,11 +1,10 @@
 .. toctree::
-   :caption: Theme Documentation
-   :maxdepth: 2
-
-   installing
-   configuring
-   changelog
-   contributing
+    :maxdepth: 2
+    :numbered:
+    :caption: Demo Documents
+    
+    StructuralElements
+    
  
  
 
