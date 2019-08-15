@@ -23,12 +23,6 @@ TikZ support in Read the Docs service
 
 .. tikz::
 
-\definecolor{ccqqqq}{rgb}{0.8,0,0}
-\definecolor{zzttqq}{rgb}{0.6,0.2,0}
-\definecolor{ffvvqq}{rgb}{1,0.3333333333333333,0}
-\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
-\clip(-5.67200001297169,-3.793412875688888) rectangle (11.372392469837262,6.960853823947332);
 \draw[line width=2pt,color=qqwuqq] (-3.1415925729645235,3.1415925729645133) -- (-3.1415925729645235,3.1415925729645133);
 \draw[line width=2pt,color=qqwuqq] (-3.1415925729645235,3.1415925729645133) -- (-3.1180306284276784,3.117165151449949);
 \draw[line width=2pt,color=qqwuqq] (-3.1180306284276784,3.117165151449949) -- (-3.0944686838908333,3.091033425079171);
