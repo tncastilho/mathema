@@ -100,9 +100,11 @@ at vehicula massa rhoncus quis. Mauris augue leo, pretium eget molestie vitae, e
 In hac habitasse platea dictumst. Sed sit amet imperdiet purus. 
 
 
-
+*********************
 TikZ support in Read the Docs service
-=====================================
+*********************
+
+
 
 .. tikz:: A beautiful TikZ drawing which works in readthedocs.org.
 
@@ -112,43 +114,14 @@ TikZ support in Read the Docs service
 
 
 
-1. Given the function:
-
-.. math::
-
-  f(x) = x^2
-
-2. Increment :math:`x` by a very small value :math:`h (h = Δx)`
+1. Increment :math:`x` by a very small value :math:`h (h = \Delta x)`
 
 .. math::
 
   f(x + h) = (x + h)^2
 
-3. Apply the slope formula
 
-.. math::
 
-  \frac{f(x + h) - f(x)}{h}
-
-4. Simplify the equation
-
-.. math::
-
-  \frac{x^2 + 2xh + h^2 - x^2}{h} \\
-
-  \frac{2xh+h^2}{h} = 2x+h
-
-5. Set :math:`h` to 0 (the limit as :math:`h` heads toward 0)
-
-.. math::
-
-  {2x + 0} = {2x}
-
-So what does this mean? It means for the function :math:`f(x) = x^2`, the slope at any point equals :math:`2x`. The formula is defined as:
-
-.. math::
-
-  \lim_{h\to0}\frac{f(x+h) - f(x)}{h}
 
 
 TikZ extension for Sphinx
