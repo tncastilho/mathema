@@ -12,6 +12,21 @@ TikZ support in Read the Docs service
 
 
 
+.. tikz::
+
+\def \n {5}
+\def \radius {3cm}
+\def \margin {8} % margin in angles, depends on the radius
+
+\foreach \s in {1,...,\n}
+{
+  \node[draw, circle] at ({360/\n * (\s - 1)}:\radius) {$\s$};
+  \draw[->, >=latex] ({360/\n * (\s - 1)+\margin}:\radius) 
+    arc ({360/\n * (\s - 1)+\margin}:{360/\n * (\s)-\margin}:\radius);
+}
+
+
+
 
 1. Increment :math:`x` by a very small value :math:`h (h = \Delta x)`
 
