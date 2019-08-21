@@ -56,10 +56,10 @@ TERMINA!!!
 
     With a sidebar on the right.
     
-.. math::    Esboce os gráficos e calcule os limites laterais das funções:
 
-a) :math: `f(x)=\left\{\begin{array}{l} {x^{2} -1,\ \mbox{se}\ x<0} \\ {4-x, \ \mbox{se}\ x\ge 1} \end{array}\right. 
 
-b) f(x)=\left\{\begin{array}{l} {x^{3},\ \mbox{se}\ x<2} \\ {10-x, \ \mbox{se}\ x\ge 2} \end{array}\right.` 
+a) :math: `f(x)=\left\{\begin{array}{l} {x^{2} -1,\ \mbox{se}\ x<0} \\ {4-x, \ \mbox{se}\ x\ge 1} \end{array}\right.`
+
+b) f(x)=\left\{\begin{array}{l} {x^{3},\ \mbox{se}\ x<2} \\ {10-x, \ \mbox{se}\ x\ge 2} \end{array}\right.
     
 THE END!!!!
