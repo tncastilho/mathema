@@ -34,6 +34,9 @@ Include HTML
 
 .. raw:: html
    :file: SecanteTangente.html
+   
+.. raw:: html
+   :file: TesteGeogebra.html
 
 
 
@@ -58,8 +61,3 @@ TERMINA!!!
     
 
 
-a) :math: `f(x)=\left\{\begin{array}{l} {x^{2} -1,\ \mbox{se}\ x<0} \\ {4-x, \ \mbox{se}\ x\ge 1} \end{array}\right.`
-
-b) f(x)=\left\{\begin{array}{l} {x^{3},\ \mbox{se}\ x<2} \\ {10-x, \ \mbox{se}\ x\ge 2} \end{array}\right.
-    
-THE END!!!!
