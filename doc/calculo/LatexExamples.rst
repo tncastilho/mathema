@@ -34,7 +34,9 @@ Include HTML
 
 .. raw:: html
    :file: SecanteTangente.html
-   
+
+
+2. Planilha GeoGebra
 .. raw:: html
    :file: TesteGeogebra.html
 
