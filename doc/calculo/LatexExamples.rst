@@ -56,8 +56,7 @@ TERMINA!!!
 
     With a sidebar on the right.
     
-    
-Esboce os gráficos e calcule os limites laterais das funções:
+.. raw:: html   Esboce os gráficos e calcule os limites laterais das funções:
 
 a) $f(x)=\left\{\begin{array}{l} {x^{2} -1,\ \mbox{se}\ x<0} \\ {4-x, \ \mbox{se}\ x\ge 1} \end{array}\right. $
 
