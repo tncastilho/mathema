@@ -33,7 +33,7 @@ Include HTML
 1. Planilha GeoGebra
 
 .. raw:: html
-   :file: SecanteTangente.html;
+   :file: SecanteTangente.html
 
 *********************
 Include HTML2 
@@ -42,7 +42,7 @@ Include HTML2
 2. OIOIOIOIOIOIOI
 
 .. raw:: html
-   :file: TesteGeogebra.html;
+   :file: TesteGeogebra.html
 
 
 
