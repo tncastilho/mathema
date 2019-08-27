@@ -47,6 +47,7 @@ Include HTML
 
 .. sidebar:: A code example
 
+
     With a sidebar on the right.
     
 
