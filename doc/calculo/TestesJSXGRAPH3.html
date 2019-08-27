@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<title>MathJax TeX Test Page</title>
+<!-- Copyright (c) 2010-2018 The MathJax Consortium -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js" integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js" integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+<script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+
+
+
+</head>
+<body>
+  <p>
+  [Teorema do Ângulo Externo] Em todo triângulo o ângulo externo é maior do que qualquer ângulo interno não adjacente.
+  </p>
+  <p>
+  Dem. Seja $M$ o ponto médio de $\overline{BC}$. Desenhe o círculo de raio $\overline{AM}$ centrado em $M$. Encontre o ponto $E$ na antípoda de $A$. Os triângulos $AMC$ e $BME$ são congruentes
+  por (por LAL). Portanto  $\alpha<\beta$.
+  </p>
+
+<p>
+\(x_2\)  ou $x^2$ ou $$x^2$$
+</p>
+
+
+<div id="box" class="jxgbox" style="width:700px; height:700px;"></div>
+<script type="text/javascript">
+
+
+// Init board
+
+
+var brd = JXG.JSXGraph.initBoard('box',
+            { showCopyright:false,
+              axis:false,
+              boundingbox:[-4, 4, 4, -4]
+            });
+
+
+
+
+k = brd.create('slider',[[-4,-2],[3,-2],[-5,1,5]],{name:'n', snapWidth:1});
+text = brd.create('text',[-3,3,
+      function() {
+        var temp;
+        if (k.Value() == 1) {
+          temp = katex.renderToString( 'f(x) = e^x ', {throwOnError: false});
+        } else {
+          temp = katex.renderToString('f(x) = e^{' + k.Value() + 'x}', {throwOnError: false});
+        }
+       return temp;
+     }], {fontSize:17});
+
+
+
+
+func = function () {if (time <= 50) {return true} else {return false};}
+
+var time = 1;
+t = brd.create('point', [Math.sin(Math.PI*2),-1], {style:6,Color:'#009999',
+ visible: func
+});
+setInterval(function(){t.moveTo([Math.sin(time*Math.PI*2/12),-1],800); time++; },1000);
+
+
+//setTimeout(func, 4 * 1000);
+
+
+
+//setInterval(function(){t.moveTo([time,0],800); time++; },1000);
+// Protocol
+// Create points
+var p = [];
+p[1] = brd.create('point', [0,0], {style:6,Color:'#009999', Name: "A"});
+p[2] = brd.create('point', [2,0], {style:6,Color:'#009999', Name: "B"});
+p[3] = brd.create('point', [0.8,1.2], {style:6,Color:'#009999', Name: "C"});
+var triangle = brd.create('polygon',[p[1],p[2],p[3]], {
+  fillOpacity:function () {
+        return t.X();
+    },
+  fillColor:'#009999'
+});
+
+
+
+var alpha = brd.create('angle', [p[1],p[3],p[2]], {type:'sector', orthoType:'square', orthoSensitivity:2, radius:0.2,Color:'#009999'});
+var l = brd.create('line',[p[1],p[2]],{visible:false});
+var c = brd.create('circle',[p[2],p[1]],{visible:false});
+var i = brd.create('intersection', [l, c],{visible:false});
+var segm1 = brd.create('segment',[p[1],i],{strokeOpacity:0.1});
+var beta = brd.create('angle', [i,p[2],p[3]], {type:'sector', orthoType:'square', orthoSensitivity:2, radius:0.2,Color:'#009999'});
+
+
+var mp1 = brd.create('midpoint', [p[2], p[3]], {style:6,Color:'#009999', Name: "M"});
+var c1 = brd.create('circle',[mp1 ,p[1]],{strokeOpacity:0.1});
+var line1 = brd.create('line',[p[1],mp1],{strokeOpacity:0.1});  //
+
+
+var i2 = brd.create('intersection', [line1, c1],{style:6,Color:'#009999'});
+var segm2 = brd.create('segment',[p[3],i2],{strokeOpacity:0.1});
+var segm3 = brd.create('segment',[p[2],i2],{strokeOpacity:0.1});
+
+
+//setInterval(function(){p[1].moveTo([Math.sin(time*Math.PI*2/12),0],800); time++; },1000);
+
+
+
+
+
+setTimeout('Tiago', 3000)
+
+
+brd.update();
+</script>
+
+<!-- KATEX - INICIO -->
+  <script>
+        renderMathInElement(
+            document.body,
+            {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "\\[", right: "\\]", display: true},
+                    {left: "$", right: "$", display: false},
+                    {left: "\\(", right: "\\)", display: false}
+                ]
+            }
+        );
+      </script>
+  <!-- KATEX - FIM -->
+
+
+</body>
+</html>
