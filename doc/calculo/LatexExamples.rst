@@ -30,12 +30,11 @@ TikZ support in Read the Docs service
 Include HTML 
 *********************
 
-1. KATEX
+1. Angulo Externo
 
 .. raw:: html
-    :file: TestesJSXGRAPH3.html
+    :file: AnguloExterno.html
 
-2. TERMINA!!!
 
 
 .. sidebar:: A code example
