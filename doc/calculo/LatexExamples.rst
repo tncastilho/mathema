@@ -30,19 +30,12 @@ TikZ support in Read the Docs service
 Include HTML 
 *********************
 
-1. Planilha GeoGebra
+1. KATEX
 
 .. raw:: html
-   :file: TesteGeogebra.html
+    :file: TestesJSXGRAPH3.html
 
-
-
-2. KATEX
-
-.. raw:: html
-    :file: TestesJSXGRAPH2.html
-
-3. TERMINA!!!
+2. TERMINA!!!
 
 
 .. sidebar:: A code example
