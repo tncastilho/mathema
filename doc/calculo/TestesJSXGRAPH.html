@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>MathJax TeX Test Page</title>
+<!-- Copyright (c) 2010-2018 The MathJax Consortium -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+
+<script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+
+
+
+</head>
+<body>
+
+<p>
+[Teorema do Ângulo Externo] Em todo triângulo o ângulo externo é maior do que qualquer ângulo interno não adjacente.
+</p>
+<p>
+Dem. Seja $M$ o ponto médio de $\overline{BC}$. Desenhe o círculo de raio $\overline{AM}$ centrado em $M$. Encontre o ponto $E$ na antípoda de $A$. Os triângulos $AMC$ e $BME$ são congruentes
+por (por LAL). Portanto  $\alpha<\beta$.
+</p>
+
+
+<div id="box" class="jxgbox" style="width:100%; height:100%;"></div>
+<script type="text/javascript">
+
+
+// Init board
+
+JXG.Options.text.useMathJax = true;
+var brd = JXG.JSXGraph.initBoard('box',
+            { showCopyright:false,
+              axis:false,
+              boundingbox:[-4, 4, 4, -4]
+            });
+
+
+
+
+k = brd.create('slider',[[-4,-2],[3,-2],[-5,1,5]],{name:'n', snapWidth:1});
+brd.create('text',[-3,3,
+      function() {
+        var temp;
+        if (k.Value() == 1) {
+          temp = '\\[f(x) = e^x \\]';
+        } else {
+          temp = '\\[f(x) = e^{' + k.Value() + 'x}\\]';
+        }
+       return temp;
+     }], {fontSize:15});
+
+
+
+var time = 1;
+t = brd.create('point', [Math.sin(Math.PI*2),-1], {style:6,Color:'#009999',
+ visible:function () {if (time <= 25) {return true} else {return false};}
+});
+setInterval(function(){t.moveTo([Math.sin(time*Math.PI*2/12),-1],800); time++; },1000);
+//setInterval(function(){t.moveTo([time,0],800); time++; },1000);
+// Protocol
+// Create points
+var p = [];
+p[1] = brd.create('point', [0,0], {style:6,Color:'#009999', Name: "A"});
+p[2] = brd.create('point', [2,0], {style:6,Color:'#009999', Name: "B"});
+p[3] = brd.create('point', [0.8,1.2], {style:6,Color:'#009999', Name: "C"});
+var triangle = brd.create('polygon',[p[1],p[2],p[3]], {
+  fillOpacity:function () {
+        return t.X();
+    },
+  fillColor:'#009999'
+});
+
+
+
+var alpha = brd.create('angle', [p[1],p[3],p[2]], {type:'sector', orthoType:'square', orthoSensitivity:2, radius:0.2,Color:'#009999'});
+var l = brd.create('line',[p[1],p[2]],{visible:false});
+var c = brd.create('circle',[p[2],p[1]],{visible:false});
+var i = brd.create('intersection', [l, c],{visible:false});
+var segm1 = brd.create('segment',[p[1],i],{strokeOpacity:0.1});
+var beta = brd.create('angle', [i,p[2],p[3]], {type:'sector', orthoType:'square', orthoSensitivity:2, radius:0.2,Color:'#009999'});
+
+
+var mp1 = brd.create('midpoint', [p[2], p[3]], {style:6,Color:'#009999', Name: "M"});
+var c1 = brd.create('circle',[mp1 ,p[1]],{strokeOpacity:0.1});
+var line1 = brd.create('line',[p[1],mp1],{strokeOpacity:0.1});  //
+
+
+var i2 = brd.create('intersection', [line1, c1],{style:6,Color:'#009999'});
+var segm2 = brd.create('segment',[p[3],i2],{strokeOpacity:0.1});
+var segm3 = brd.create('segment',[p[2],i2],{strokeOpacity:0.1});
+
+
+//setInterval(function(){p[1].moveTo([Math.sin(time*Math.PI*2/12),0],800); time++; },1000);
+
+brd.update();
+</script>
+
+
+
+
+</body>
+</html>
