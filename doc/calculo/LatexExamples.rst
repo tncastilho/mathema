@@ -41,10 +41,13 @@ Include HTML
 
 .. raw:: html
    :file: JSXgraph.html
-   
 
+3. KATEX
 
-TERMINA!!!
+.. raw:: html
+    :file: TestesJSXGRAPH2.html
+
+4. TERMINA!!!
 
 
 .. sidebar:: A code example
