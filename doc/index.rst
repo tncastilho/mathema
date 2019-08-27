@@ -14,6 +14,11 @@
     calculo/StructuralElements
  
 
-    
+.. toctree::
+    :maxdepth: 2
+    :numbered:
+    :caption: Testes
+
+    calculo/Teste  
 
    
