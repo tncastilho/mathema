@@ -37,17 +37,12 @@ Include HTML
 
 
 
-2. Gráfico JSXgraph
-
-.. raw:: html
-   :file: JSXgraph.html
-
-3. KATEX
+2. KATEX
 
 .. raw:: html
     :file: TestesJSXGRAPH2.html
 
-4. TERMINA!!!
+3. TERMINA!!!
 
 
 .. sidebar:: A code example
