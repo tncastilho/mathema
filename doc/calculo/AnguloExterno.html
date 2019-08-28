@@ -105,7 +105,7 @@ function sliderAnimation() {
     if (k.position>1.0) k.position = 0.0;
     brd.update();
     //animate = setTimeout(sliderAnimation,500);
-    //var time = 1;
+    var time = 1;
     animate =  setInterval(function(){p[1].moveTo([Math.cos(k.Value()*Math.PI*2/120),Math.cos(k.Value()*Math.PI*2/120)],800); time++; },1000);
 };
 
